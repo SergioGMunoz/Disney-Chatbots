@@ -33,7 +33,7 @@
     </section>
     
     <!-- Texto no hay resultados -->
-    <h2 id="no-result-text">Parece que no hay ningún resultado  :(</h2>
+    <h2 id="err-text"></h2>
 
     <!-- Footer -->
     <footer>
@@ -42,14 +42,10 @@
         </div>
         <div id="pages">
             <div id="info">
-                <p>Página</p>
-                <p id="actual-page">1</p>
-                <p>  ...  </p>
-                <p id="last-page">50</p>
+                <button class="button-grey" id="before"><img class="icon" src="img/before-icon.svg"></button>
+                <p>Página <span id="actual-page">1</span> ... <span id="last-page">50</span></p>
+                <button class="button-grey" id="next"><img class="icon" src="img/next-icon.svg"></button>
             </div>
-           <div id="next">
-                <button class="button-grey"><img class="icon" src="../img/next-icon.svg"></button>
-           </div>
         </div>
     </footer>
 

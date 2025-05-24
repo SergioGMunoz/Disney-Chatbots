@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disney IA Chatbots</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
 </head>
 <body>
     <!-- Barra de menú -->
@@ -15,10 +15,10 @@
             <h1>IA Chatbot</h1>
         </div>
         <div id="nav-filters">
-            <form name="filters">
+            <form name="filters" id="form-filters">
                 <input name="name" placeholder="Nombre" class="button-grey"> 
                 <input name="film" placeholder="Pelicula" class="button-grey"> 
-                <input name="tv-show" placeholder="Serie" class="button-grey"> 
+                <input name="show" placeholder="Serie" class="button-grey"> 
                 <button class="button-grey"><img class="icon" src="img/search-icon.svg"></button>
             </form>
         </div>
@@ -30,18 +30,10 @@
 
     <!-- Sección principal - Resultados -->
     <section id="characters-list">
-        <div class="character">
-            <div>
-                <img class="icon" src="img/image.png" >
-            </div>
-            <div>
-                <button class="button-grey">Ferb</button>
-            </div>
-        </div>
     </section>
     
     <!-- Texto no hay resultados -->
-    <h2 id="no-result-text">Parece que no hay ningún resultado  :(</h2>
+    <h2 id="err-text"></h2>
 
     <!-- Footer -->
     <footer>
@@ -50,14 +42,10 @@
         </div>
         <div id="pages">
             <div id="info">
-                <p>Página</p>
-                <p id="actual-page">1</p>
-                <p>  ...  </p>
-                <p id="last-page">50</p>
+                <button class="button-grey" id="before"><img class="icon" src="img/before-icon.svg"></button>
+                <p>Página <span id="actual-page">1</span> ... <span id="last-page">50</span></p>
+                <button class="button-grey" id="next"><img class="icon" src="img/next-icon.svg"></button>
             </div>
-           <div id="next">
-                <button class="button-grey"><img class="icon" src="img/next-icon.svg"></button>
-           </div>
         </div>
     </footer>
 
