@@ -118,28 +118,29 @@ button{
     gap: 1.2rem;
 }
 
-.character div{
-     width: 100%;
+.div-img {
+    width: 275px;
+    aspect-ratio: 4 / 3; 
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .character img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: none;
-    border-radius: 1rem;
 }
 
 .character button {
     width: 100%;
 }
 
-.character button:hover {
-    background: #e0e0e0;
-}
-
 /* Texto sin resultados */
-#no-result-text {
+#err-text{
     visibility: hidden;
     position: absolute;
     top: 50%;
