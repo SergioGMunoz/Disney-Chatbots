@@ -83,7 +83,7 @@ button{
 }
 
 
-#chats {
+#chats, #home {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -128,6 +128,11 @@ button{
     justify-content: center;
 }
 
+#character-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1;
+}
 
 .character img {
     width: 100%;
@@ -135,8 +140,8 @@ button{
     object-fit: cover;
 }
 
-.character button {
-    width: 100%;
+.delete-btn{
+    width: 50px;
 }
 
 /* Texto sin resultados */
@@ -183,7 +188,7 @@ footer *{
     overflow-y: auto;
     max-height: 100%;
 }
-.user-menssage{
+.user-message{
     background: var(--gray-light);
     border: none;
     border-radius: 1.5rem;
@@ -195,7 +200,7 @@ footer *{
     max-width: 70%;
 }
 
-.IA-menssage{
+.IA-message{
     background: var(--gray-dark);
     color: var(--gray-light);
     border: none;
@@ -208,15 +213,13 @@ footer *{
     max-width: 70%;
 }
 
-#message form {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-#message input {
+#options {
     width: 100%;
+    padding: 1rem;
+    display: grid;
+    /* Para que se auto ajusten respetando 200px */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
 
