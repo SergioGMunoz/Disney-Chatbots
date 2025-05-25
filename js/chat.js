@@ -49,6 +49,13 @@ function updatePastMessages (messages) {
         if(msg.type == 'user'){
             msgElement.className = "user-message";
         }else{
+            const infoElement = document.createElement('div');
+            infoElement.className = "info-AI";
+            infoElement.innerHTML = `
+                <img class="img-AI" src="${chats[actualID].info.imageUrl}">
+                <p>${chats[actualID].info.name}</p>
+            `;
+            chat.appendChild(infoElement);
             msgElement.className = "IA-message";
         }
         chat.appendChild(msgElement);
@@ -160,7 +167,7 @@ function renderAnswer(option) {
                 if (characterData.allies && characterData.allies.length > 0) {
                     respuesta = "💪🏻 Mis aliados son: " + characterData.allies.join(", ");
                 } else {
-                    respuesta = "💀 Estoy acabado... No se quienes son mis aliados";
+                    respuesta = "💀 Estoy acabad@... No se quienes son mis aliados";
                 }
                 break;
             case "enemigos":
@@ -174,6 +181,15 @@ function renderAnswer(option) {
                 respuesta = "Vaya...  No tengo ni idea";
         }
     }
+
+    const infoElement = document.createElement('div');
+    infoElement.className = "info-AI";
+    infoElement.innerHTML = `
+        <img class="img-AI" src="${characterData.imageUrl}">
+        <p>${characterData.name}</p>
+    `;
++
+    chat.appendChild(infoElement);
 
     const msgElement = document.createElement('p');
     msgElement.className = "IA-message";
