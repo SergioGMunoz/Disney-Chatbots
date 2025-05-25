@@ -5,6 +5,12 @@ let filtersString ='{}'; // Filtrado vacío
 
 getCharacters();
 
+// Listener para el btn de Chats
+document.getElementById('chats').addEventListener('click', () => {
+    console.log("Moviéndote a home");
+    window.location.href = 'html/chats.html';
+});
+
 // Devuelve un objeto con los campos de filtros en formato GraphQL
 function getFilterString(nameInput, filmInput, showInput) {
   let filters = "{";
@@ -31,7 +37,7 @@ function getFilterString(nameInput, filmInput, showInput) {
 function getCharacters(){
     // Limpiando y poniendo mensaje de cargando
     console.log(`Oteniendo personajes para filtros: ${filtersString} `);
-    console.log("PAGINAAAAAAAAAA -> " + actualPage);
+    console.log("PAGINA -> " + actualPage);
     document.getElementById('characters-list').innerHTML ="";
     showErrorText('Cargando...')
     const query = `
@@ -100,6 +106,10 @@ function renderResults(characters){
             </div>
         `;
         list.appendChild(character);
+        const button = character.querySelector('button'); 
+        button.addEventListener('click', () => {
+            window.location.href = `/html/chat.html?id=${item._id}`;
+        });
     } 
 }
 
@@ -157,7 +167,7 @@ form.addEventListener('submit', event => {
 
 // Pasando a la siguiente página
 const btnNext = document.getElementById('next');
-btnNext.addEventListener('click', event =>{
+btnNext.addEventListener('click', () =>{
     actualPage++;
      // Lanzar query a la API
     getCharacters(filtersString);
@@ -165,7 +175,7 @@ btnNext.addEventListener('click', event =>{
 
 // Volviendo a la anterior pagina
 const btnBefore = document.getElementById('before');
-btnBefore.addEventListener('click', event =>{
+btnBefore.addEventListener('click', () =>{
     if(actualPage > 1){
         actualPage--;
         // Lanzar query a la API
