@@ -69,13 +69,13 @@ Aplicación web que permite explorar personajes del universo Disney y preguntarl
 
 El diseño fue creado previamente en Figma, cuidando la estética simple y funcional.
 
-![image.png](figma.png)
+![figma.png](img-readme/figma.png)
 
 ## 📁 Estructura del código
 
 El proyecto está estructurado de forma muy simple, cada archivo js se encarga de gestionar su propia página con funciones independientes a las otras.
 
-![codeviz-diagram-2025-05-26T09-48-40.drawio.png](estructura.png)
+![estructura.png](img-readme/estructura.png)
 
 ## 🧩 Estructura de datos
 
