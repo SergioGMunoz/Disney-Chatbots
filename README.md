@@ -1,16 +1,16 @@
-# Documentación Disney Chatbots
+# 🧞 Documentación Disney Chatbots
 
 Aplicación web que permite explorar personajes del universo Disney y preguntarles (a través de preguntas predefinidas) información sobre ellos. 
 
-[](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"/>
+</p>
 
-[](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-[](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-[](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-
-[](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
+---
 
 # 🚀 Cómo probar el proyecto
 
@@ -20,26 +20,29 @@ Aplicación web que permite explorar personajes del universo Disney y preguntarl
     git clone https://github.com/SergioGMunoz/Disney-Chatbots
     ```
     
-2. Abre el archivo `index.html` en tu navegador favorito.
+2. Abre el archivo `index.html` en tu navegador favorito.  
+
+---
 
 # ✨ Funcionalidades principales
 
 1. **Filtrado de personajes** por nombre, película y/o serie de televisión.
     
-    ![image.png](image.png)
+    ![Filtrado](img-readme/filter.png)
     
-2. **Visualización de fichas** de personaje (nombre e imagen, etc.).
+2. **Visualización de fichas** de personaje (nombre, imagen, películas...).
     
-    ![image.png](a55dceb9-2c13-4792-94f9-e9b203c70561.png)
+    ![Ficha personaje](img-readme/card.png)
     
 3. **Chat** con respuestas predefinidas únicas para cada personaje.
     
-    ![image.png](image%201.png)
+    ![Chat](img-readme/chat.png)
     
-4. **Recuperación** del chat con localStorage.
+4. **Recuperación** del chat con `localStorage` al volver a cargar la app.
     
-    ![image.png](image%202.png)
-    
+    ![LocalStorage](img-readme/localstorage.png)
+
+---
 
 # 🌐 API utilizada
 
@@ -66,13 +69,13 @@ Aplicación web que permite explorar personajes del universo Disney y preguntarl
 
 El diseño fue creado previamente en Figma, cuidando la estética simple y funcional.
 
-![image.png](image%203.png)
+![image.png](figma.png)
 
 ## 📁 Estructura del código
 
 El proyecto está estructurado de forma muy simple, cada archivo js se encarga de gestionar su propia página con funciones independientes a las otras.
 
-![codeviz-diagram-2025-05-26T09-48-40.drawio.png](codeviz-diagram-2025-05-26T09-48-40.drawio.png)
+![codeviz-diagram-2025-05-26T09-48-40.drawio.png](estructura.png)
 
 ## 🧩 Estructura de datos
 
